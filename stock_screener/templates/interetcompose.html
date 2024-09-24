@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur d'Intérêts Composés</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculateur d'Intérêts Composés</h1>
+        <form id="calculator">
+            <label for="initial">Capital Initial (€):</label>
+            <input type="number" id="initial" required>
+            
+            <label for="monthly">Épargne Investi Chaque Mois (€):</label>
+            <input type="number" id="monthly" required>
+            
+            <label for="rate">Taux d'Intérêts Annuel (%):</label>
+            <input type="number" id="rate" required>
+            
+            <label for="years">Nombre d'Années d'Investissement:</label>
+            <input type="number" id="years" required>
+            
+            <button type="button" onclick="calculate()">Calculer</button>
+        </form>
+
+        <div id="result">
+            <h2>Résultat:</h2>
+            <p id="total"></p>
+        </div>
+
+        <canvas id="chart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
