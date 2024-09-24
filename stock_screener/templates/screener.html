@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top 15 des capitalisations boursières</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %} <!-- Inclure la navbar -->
+
+    <div class="container">
+        <h1 class="text-center my-4">Screener</h1>
+
+        <table class="table table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nom de l'entreprise</th>
+                    <th>Ticker</th>
+                    <th>Prix actuel</th>
+                    <th>Pays</th>
+                    <th>Market Cap</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in top_15_stocks %}
+                <tr>
+                    <td>
+                        <a href="{{ url_for('ticker_page', ticker=stock.ticker) }}">{{ stock.name }}</a>
+                    </td>
+                    <td>{{ stock.ticker }}</td>
+                    <td>{{ stock.price }}</td>
+                    <td>{{ stock.country }}</td>
+                    <td>{{ stock.market_cap }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

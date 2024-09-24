@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ ticker }} - Analyse</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %} <!-- Inclure la navbar -->
+
+    <div class="container">
+        <h1 class="my-4">{{ ticker }} - Analyse des critères d'évaluation</h1>
+
+        <!-- Affichage du graphique bougie -->
+        <h2 class="my-4">Graphique des données historiques (1 an)</h2>
+        <div>{{ graph_html | safe }}</div>
+
+        <!-- Tableau des critères -->
+        <h2 class="my-4">Tableau d'évaluation</h2>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Critère</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Rentabilité</td>
+                    <td>{{ score["Rentabilité"] }} / 2</td>
+                </tr>
+                <tr>
+                    <td>Analyse des Marges</td>
+                    <td>{{ score["Analyse des Marges"] }} / 4</td>
+                </tr>
+                <tr>
+                    <td>Liquidité à court terme</td>
+                    <td>{{ score["Liquidité à court terme"] }} / 2</td>
+                </tr>
+                <tr>
+                    <td>Solvabilité</td>
+                    <td>{{ score["Solvabilité"] }} / 4</td>
+                </tr>
+                <tr>
+                    <td>Croissance</td>
+                    <td>{{ score["Croissance"] }} / 3</td>
+                </tr>
+                <tr>
+                    <td>Valorisation</td>
+                    <td>{{ score["Valorisation"] }} / 5</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Bouton retour à l'accueil -->
+        <a href="{{ url_for('index') }}" class="btn btn-primary mt-4">Retour à la page d'accueil</a>
+    </div>
+</body>
+</html>

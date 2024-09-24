@@ -1,0 +1,79 @@
+/* Augmenter la taille globale de la navbar */
+.navbar-custom {
+    background-color: transparent; /* Couleur verte */
+    height: 90px; /* Hauteur augmentée de la navbar */
+    padding: 20px 20px; /* Ajout d'espacement interne pour plus de confort */
+    font-size: 1.2em; /* Taille du texte augmentée */
+}
+
+/* Décalage du logo et de la barre de recherche */
+.navbar-custom .navbar-brand {
+    margin-left: 20px; /* Décalage du logo de 20px vers la droite */
+}
+
+.navbar-custom .search-bar {
+    margin-left: 20px; /* Décalage de la barre de recherche de 20px vers la droite */
+}
+
+/* Augmenter la taille de l'image/logo dans la navbar */
+.navbar-custom .navbar-brand img {
+    width: 100px; /* Largeur augmentée */
+    height: 100px; /* Hauteur augmentée */
+    border-radius: 20px; /* Garde les coins arrondis */
+    margin-left: 50px;
+    margin-top: 50px;
+    
+}
+
+/* Style pour ajuster la taille des liens de la navbar */
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    font-size: 1.2em; /* Taille du texte des liens augmentée */
+}
+
+/* Ajustement de la barre de recherche à la nouvelle taille */
+.search-bar {
+    margin-left: 50px;
+    margin-top: 50px;
+    height: 45px; /* Hauteur de la barre de recherche ajustée à la navbar */
+    width: 350px; /* Légèrement plus large */
+    font-size: 1em; /* Taille du texte dans la barre de recherche */
+    border-radius: 50px; /* Arrondi de la barre de recherche */
+    padding-left: 20px; /* Espace pour le texte */
+    border: 1px solid white; /* Bordure blanche */
+    background-color: white; /* Fond transparent */
+    color: white; /* Texte blanc */
+}
+
+/* Ajustement du bouton avec la loupe */
+.search-btn {
+    height: 45px; /* Aligner avec la barre de recherche */
+    padding: 5px 20px; /* Un peu plus large */
+    font-size: 1.2em; /* Taille de l'icône de loupe plus grande */
+    border-radius: 50px; /* Arrondi du bouton */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Pour changer la couleur de l'icône de la loupe */
+.search-btn i {
+    color: white;
+}
+
+/* Pour ajuster la couleur au survol du bouton */
+.search-btn:hover {
+    background-color: white;
+    color: #00611E; /* Couleur du texte et de l'icône au survol */
+}
+
+.search-btn:hover i {
+    color: white; /* Couleur de la loupe au survol */
+}
+
+/* Ajustements de la barre de recherche sur petit écran */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 100%; /* Prend toute la largeur sur mobile */
+    }
+}

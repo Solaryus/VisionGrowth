@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vision Growth - Accueil</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Importation de la police League Spartan depuis Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Ajout d'un fond dégradé du noir vers le vert de haut en bas */
+        body {
+            background: linear-gradient(to bottom, black, green);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        /* Centrage du texte */
+        .content {
+            flex: 1;
+            display: flex;
+            justify-content: flex-start; /* Aligner à gauche */
+            align-items: center; /* Centrer verticalement */
+            padding-left: 177px; /* Espacement du texte à gauche */
+            color: white;
+        }
+
+        /* Style du titre avec la police League Spartan */
+        h1 {
+            font-size: 7rem;
+            font-family: 'League Spartan', sans-serif; /* Application de la police */
+            line-height: 1.1; /* Espacement des lignes */
+        }
+
+        /* Forcer la séparation des lignes pour "Visualize" et "Your Company" */
+        .visualize-line {
+            display: block; /* Forcer un retour à la ligne */
+        }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %} <!-- Inclure la navbar -->
+
+    <div class="content">
+        <h1>
+            <span class="visualize-line"><strong>Visualize</strong></span>
+            <span class="visualize-line"><strong>Your Company</strong></span>
+        </h1>
+    </div>
+
+    <!-- Inclusion du footer ou autres éléments si nécessaire -->
+</body>
+</html>

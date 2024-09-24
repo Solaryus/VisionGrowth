@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-custom">
+    <a class="navbar-brand" href="/">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" width="30" height="30" class="d-inline-block align-top">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <!-- Dropdown menu for tools -->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Outil
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/screener.html">Screener</a>
+                    <a class="dropdown-item" href="/interetcompose.html">Intérêt Composé</a>
+                    <a class="dropdown-item" href="/comparateur.html">Comparateur</a>
+                </div>
+            </li>
+        </ul>
+
+        <!-- Search form -->
+        <form class="form-inline my-2 my-lg-0" method="POST" action="/">
+            <input class="form-control mr-sm-2 search-bar" type="search" placeholder="Rechercher un ticker" aria-label="Search" name="ticker" required>
+            <button class="btn btn-outline-light my-2 my-sm-0 search-btn" type="submit">
+                <span class="sr-only">Rechercher</span>
+            </button>
+        </form>
+    </div>
+</nav>
